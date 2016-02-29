@@ -7,6 +7,27 @@ authors = [
     "Matthew Bentley <matthew@bentley.link>"
 ]
 
+description = "Postgres db middleware for nickel"
+
+# These URLs point to more information about the repository
+documentation = "https://github.com/nickel-org/nickel-postgres"
+homepage = "https://github.com/nickel-org/nickel-postgres"
+repository = "https://github.com/nickel-org/nickel-postgres"
+
+# This points to a file in the repository (relative to this Cargo.toml). The
+# contents of this file are stored and indexed in the registry.
+readme = "README.md"
+
+# This is a small list of keywords used to categorize and search for this
+# package.
+keywords = ["nickel", "postgres"]
+
+# This is a string description of the license for this package. Currently
+# crates.io will validate the license provided against a whitelist of known
+# license identifiers from http://spdx.org/licenses/. Multiple licenses can
+# be separated with a `/`
+license = "MIT"
+
 [dependencies]
 postgres = "^0.11"
 r2d2 = "^0.6"

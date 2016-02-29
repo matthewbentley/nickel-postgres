@@ -1,16 +1,16 @@
 [package]
 
 name = "nickel_postgres"
-version = "0.0.0"
+version = "0.1.0"
 authors = [
-    "bguiz"
+    "bguiz",
+    "Matthew Bentley <matthew@bentley.link>"
 ]
 
 [dependencies]
-postgres = "*"
-r2d2 = "*"
-r2d2_postgres = "*"
-plugin = "*"
-typemap = "*"
-openssl = "0.6.7"
-nickel = "*"
+postgres = "^0.11"
+r2d2 = "^0.6"
+r2d2_postgres = "^0.10"
+plugin = "^0.2"
+typemap = "^0.3"
+nickel = "^0.7"

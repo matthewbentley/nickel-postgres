@@ -2,10 +2,10 @@ use std::sync::Arc;
 use std::error::Error as StdError;
 
 use nickel::{Request, Response, Middleware, Continue, MiddlewareResult};
-use r2d2_postgres::{PostgresConnectionManager, SslMode};
+use r2d2_postgres::{PostgresConnectionManager, TlsMode};
 use r2d2::{Pool, HandleError, Config, PooledConnection};
 use typemap::Key;
-use plugin::{Pluggable, Extensible};
+use plugin::Extensible;
 
 pub struct PostgresMiddleware {
     pub pool: Arc<Pool<PostgresConnectionManager>>
@@ -13,7 +13,7 @@ pub struct PostgresMiddleware {
 
 impl PostgresMiddleware {
     pub fn new(connect_str: &str,
-               ssl_mode: SslMode,
+               ssl_mode: TlsMode,
                num_connections: u32,
                error_handler: Box<HandleError<::r2d2_postgres::Error>>)
                     -> Result<PostgresMiddleware, Box<StdError>> {
